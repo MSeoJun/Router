@@ -16,21 +16,12 @@ app.get('/', function(req,res){
 });
 
 app.post('/process/Login', function(req,res){    
-    // req.body.ID;
-    
-    console.log(req.body.password);
-    return;
-    // return;
-    
-    res.send(req.body.ID,req.body.password);
-    // res.send(PW);
-    return;
-    // res.send('/success.html',{ID:ID,PW:PW});
-    console.log('아이디 : ',ID);
-    console.log('비밀번호 : ',PW);
+    res.send(req.body.ID+'<br>'+req.body.password);
+    console.log('아이디 : ',req.body.ID);
+    console.log('비밀번호 : ',req.body.password);
 });
 
 
 app.listen(port, function(){
     console.log('연결되었습니다. : '+ port);
-})
+}) 
